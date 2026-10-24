@@ -8,6 +8,8 @@ import {Ch2Postpone} from './chapters/Ch2Postpone';
 import {Ch3Foundation} from './chapters/Ch3Foundation';
 import {Ch4Practical} from './chapters/Ch4Practical';
 import {Ch5NextStep} from './chapters/Ch5NextStep';
+import {LatteVideo} from './latte/LatteVideo';
+import {latteVideo} from './latte/config';
 
 const SCENES = [Ch1Hook, Ch2Postpone, Ch3Foundation, Ch4Practical, Ch5NextStep];
 
@@ -70,5 +72,8 @@ export const RemotionRoot: React.FC = () => (
         {...common}
       />
     ))}
+    {/* Latte & takaful video */}
+    <Composition id={latteVideo.id} component={LatteVideo} durationInFrames={latteVideo.durationSec * latteVideo.fps} fps={latteVideo.fps} width={latteVideo.width} height={latteVideo.height} />
+    <Composition id={`${latteVideo.id}Sample`} component={LatteVideo} durationInFrames={latteVideo.sampleSec * latteVideo.fps} fps={latteVideo.fps} width={latteVideo.width} height={latteVideo.height} />
   </>
 );

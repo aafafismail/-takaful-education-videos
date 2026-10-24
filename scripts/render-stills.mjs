@@ -13,7 +13,7 @@ fs.mkdirSync(out, {recursive: true});
 
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts')});
 const browserExecutable = process.env.REMOTION_BROWSER ?? null;
-const composition = await selectComposition({serveUrl, id: 'HealingFull', inputProps: {}, browserExecutable});
+const composition = await selectComposition({serveUrl, id: process.env.COMP ?? 'HealingFull', inputProps: {}, browserExecutable});
 for (const t of list) {
   const frame = Math.min(composition.durationInFrames - 1, Math.round(t * composition.fps));
   const file = path.join(out, `t${t.toFixed(1).padStart(5, '0')}.png`);

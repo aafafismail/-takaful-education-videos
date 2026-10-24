@@ -12,7 +12,11 @@
     "render:all": "npm run render && npm run render:chapters",
     "stills": "node scripts/render-stills.mjs",
     "subtitles": "node scripts/build-subtitles.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "latte:sample": "remotion render LatteTakafulSample renders/latte/latte-sample-10s.mp4",
+    "latte:render": "remotion render LatteTakaful renders/latte/latte-takaful-full.mp4",
+    "latte:placeholders": "python3 scripts/make-latte-placeholders.py",
+    "subtitles:latte": "node scripts/build-latte-subtitles.mjs"
   },
   "dependencies": {
     "@fontsource/anton": "^5.2.5",
@@ -24,6 +28,7 @@
     "remotion": "4.0.527"
   },
   "devDependencies": {
+    "@twemoji/svg": "^15.0.0",
     "@types/react": "19.1.8",
     "typescript": "5.8.3"
   }
