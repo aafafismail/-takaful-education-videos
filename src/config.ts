@@ -28,24 +28,42 @@ export const video = {
 };
 
 export const colors = {
-  navy: '#0D1A31',
-  navyDeep: '#08111F',
-  navySoft: '#17284A',
-  navyLine: '#2A3D63',
-  cream: '#F5EEDF',
-  creamDim: 'rgba(245, 238, 223, 0.72)',
-  creamFaint: 'rgba(245, 238, 223, 0.14)',
-  gold: '#D3AE62',
-  goldSoft: 'rgba(211, 174, 98, 0.22)',
-  red: '#D2564A',
-  redSoft: 'rgba(210, 86, 74, 0.2)',
+  // Brand
+  navy: '#14254A', // ink: outlines and text
+  navySoft: '#2B4478',
+  cream: '#FBF3E4', // page background
+  paper: '#F4E5C8',
+  white: '#FFFCF5',
+  gold: '#F0B54A',
+  goldDeep: '#D8952A',
+  goldSoft: 'rgba(240, 181, 74, 0.35)',
+  red: '#E2604F',
+  redSoft: 'rgba(226, 96, 79, 0.18)',
+  // Illustration helpers
+  sky: '#BFDCEB',
+  leaf: '#7FBF8E',
+  leafDeep: '#4E9A66',
+  skin: '#F3C9A2',
+  skinDeep: '#C98D63',
+  blush: '#F5A28E',
+  blue: '#3E66AE',
+  muted: 'rgba(20, 37, 74, 0.62)',
+  // Cinematic overlays
+  glass: 'rgba(10, 20, 40, 0.58)',
+  glassLine: 'rgba(255, 220, 150, 0.45)',
+  creamText: '#FFF6E6',
+  captionHighlight: '#FFD54A',
 };
 
 export const fonts = {
-  /** Editorial headlines and numbers */
-  display: 'Fraunces, Georgia, serif',
+  /** Bold friendly headlines and numbers */
+  display: 'Poppins, Arial, sans-serif',
   /** Labels, captions, notes */
-  body: 'Inter, Arial, sans-serif',
+  body: 'Poppins, Arial, sans-serif',
+  /** Hand-written annotations */
+  hand: 'Caveat, cursive',
+  /** Big bold captions (reference style) */
+  caption: 'Anton, Impact, sans-serif',
 };
 
 /**
@@ -90,9 +108,19 @@ export const audio = {
 
 export type Caption = {start: number; end: number; text: string};
 
+/**
+ * One background image per scene. Files live in public/scenes/<file>.jpg.
+ * start: seconds from chapter start. cam: camera move. tin: transition in.
+ * dim: darken 0..1 (helps overlays read). blur: px blur.
+ */
+export type Cam = 'in' | 'out' | 'up' | 'down' | 'left' | 'right';
+export type Transition = 'fade' | 'cross' | 'thread' | 'tear' | 'flash';
+export type Scene = {file: string; start: number; cam: Cam; tin: Transition; dim?: number; blur?: number};
+
 export const chapters = [
   {
     id: 'Ch1Hook',
+    scenes: [{file: 's01', start: 0, cam: 'in', tin: 'fade'}, {file: 's02', start: 2.0, cam: 'up', tin: 'thread'}, {file: 's03', start: 5.0, cam: 'in', tin: 'cross'}, {file: 's04', start: 8.0, cam: 'down', tin: 'thread', dim: 0.35}] as Scene[],
     number: '01',
     name: 'Gaji masuk',
     durationSec: 16,
@@ -118,17 +146,18 @@ export const chapters = [
       statNote: 'Kadar penembusan pasaran — bukan peratus tepat individu yang dilindungi.',
     },
     captions: [
-      {start: 0.3, end: 2.0, text: 'Gaji masuk.'},
-      {start: 2.0, end: 5.0, text: 'Komitmen, shopping, healing… semua dah ada bahagian.'},
-      {start: 5.0, end: 8.0, text: 'Perlindungan? Tunggu baki dulu. Familiar?'},
-      {start: 8.0, end: 13.2, text: 'Kadar penembusan takaful keluarga Malaysia ialah 19.63% pada 2025.'},
-      {start: 13.2, end: 15.6, text: 'Jom mula dengan bajet kita sendiri.'},
+      {start: 0.3, end: 2.0, text: 'Gaji *masuk.*'},
+      {start: 2.0, end: 5.0, text: 'Komitmen, *shopping, healing…* semua dah ada bahagian.'},
+      {start: 5.0, end: 8.0, text: '*Perlindungan?* Tunggu baki dulu. Familiar?'},
+      {start: 8.0, end: 13.2, text: 'Kadar penembusan takaful keluarga Malaysia ialah *19.63%* pada 2025.'},
+      {start: 13.2, end: 15.6, text: 'Jom mula dengan *bajet kita sendiri.*'},
     ] as Caption[],
     narration:
       'Gaji masuk. Komitmen, shopping, healing… semua dah ada bahagian. Perlindungan? Tunggu baki dulu. Familiar? Kadar penembusan takaful keluarga Malaysia ialah 19.63% pada 2025. Jom mula dengan bajet kita sendiri.',
   },
   {
     id: 'Ch2Postpone',
+    scenes: [{file: 's05', start: 0, cam: 'in', tin: 'fade'}, {file: 's06', start: 1.8, cam: 'right', tin: 'tear'}, {file: 's07', start: 5.2, cam: 'in', tin: 'cross', dim: 0.2}, {file: 's08', start: 8.0, cam: 'out', tin: 'flash'}, {file: 's09', start: 9.8, cam: 'in', tin: 'cross', dim: 0.3}] as Scene[],
     number: '02',
     name: 'Kenapa tangguh',
     durationSec: 15,
@@ -141,7 +170,7 @@ export const chapters = [
     text: {
       now: 'Seronok sekarang.',
       later: 'Perlindungan… nanti?',
-      icons: ['Shopping', 'Kopi', 'Cuti'],
+      icons: ['Shopping', 'Teh tarik', 'Cuti'],
       nowLabel: 'Sekarang',
       laterLabel: 'Nanti',
       healingOk: 'Healing tak salah.',
@@ -150,17 +179,18 @@ export const chapters = [
       tomorrow: 'Esok',
     },
     captions: [
-      {start: 0.2, end: 1.8, text: 'Kenapa kita tangguh?'},
-      {start: 1.8, end: 5.2, text: 'Sebab seronok shopping atau bercuti, kita rasa sekarang.'},
-      {start: 5.2, end: 8.0, text: 'Manfaat perlindungan pula terasa jauh.'},
-      {start: 8.0, end: 9.8, text: 'Healing tak salah.'},
-      {start: 9.8, end: 14.4, text: 'Cuma, jangan sampai bajet hari ini buat kita risau kemudian.'},
+      {start: 0.2, end: 1.8, text: 'Kenapa kita *tangguh?*'},
+      {start: 1.8, end: 5.2, text: 'Sebab seronok shopping atau bercuti, kita rasa *sekarang.*'},
+      {start: 5.2, end: 8.0, text: 'Manfaat perlindungan pula terasa *jauh.*'},
+      {start: 8.0, end: 9.8, text: '*Healing* tak salah.'},
+      {start: 9.8, end: 14.4, text: 'Cuma, jangan sampai bajet *hari ini* buat kita risau *kemudian.*'},
     ] as Caption[],
     narration:
       'Kenapa kita tangguh? Sebab seronok shopping atau bercuti, kita rasa sekarang. Manfaat perlindungan pula terasa jauh. Healing tak salah. Cuma, jangan sampai bajet hari ini buat kita risau kemudian.',
   },
   {
     id: 'Ch3Foundation',
+    scenes: [{file: 's10', start: 0, cam: 'in', tin: 'fade'}, {file: 's11', start: 2.6, cam: 'up', tin: 'thread', dim: 0.45}, {file: 's12', start: 10.6, cam: 'out', tin: 'tear', dim: 0.4}] as Scene[],
     number: '03',
     name: 'Bina asas',
     durationSec: 16,
@@ -184,16 +214,17 @@ export const chapters = [
       sliderLabel: 'ikut kemampuan anda',
     },
     captions: [
-      {start: 0.2, end: 2.6, text: 'Bayangkan kewangan macam piramid.'},
-      {start: 2.6, end: 6.2, text: 'Asasnya: aliran tunai, dana kecemasan dan perlindungan.'},
-      {start: 6.2, end: 10.6, text: 'Bila asas lebih kukuh, lebih tenang kita bina simpanan, pelaburan dan impian.'},
-      {start: 10.6, end: 15.6, text: 'Asingkan bajet awal—ikut kemampuan, bukan semestinya sepuluh peratus.'},
+      {start: 0.2, end: 2.6, text: 'Bayangkan kewangan macam *piramid.*'},
+      {start: 2.6, end: 6.2, text: 'Asasnya: *aliran tunai, dana kecemasan* dan *perlindungan.*'},
+      {start: 6.2, end: 10.6, text: 'Bila asas lebih *kukuh,* lebih tenang kita bina simpanan, pelaburan dan *impian.*'},
+      {start: 10.6, end: 15.6, text: 'Asingkan bajet awal—ikut *kemampuan,* bukan semestinya sepuluh peratus.'},
     ] as Caption[],
     narration:
       'Bayangkan kewangan macam piramid. Asasnya: aliran tunai, dana kecemasan dan perlindungan. Bila asas lebih kukuh, lebih tenang kita bina simpanan, pelaburan dan impian. Asingkan bajet awal—ikut kemampuan, bukan semestinya sepuluh peratus.',
   },
   {
     id: 'Ch4Practical',
+    scenes: [{file: 's13', start: 0, cam: 'in', tin: 'fade', dim: 0.4}, {file: 's14', start: 6.0, cam: 'left', tin: 'cross', dim: 0.35}, {file: 's14', start: 10.6, cam: 'in', tin: 'cross', dim: 0.5, blur: 14}] as Scene[],
     number: '04',
     name: 'Jadikan praktikal',
     durationSec: 17,
@@ -222,17 +253,18 @@ export const chapters = [
       note: 'Ilustrasi bajet sahaja. Sumbangan dan manfaat bergantung pada pelan, umur, kesihatan serta pengunderaitan. Tertakluk terma dan syarat.',
     },
     captions: [
-      {start: 0.2, end: 2.4, text: 'Contoh gaji lima ribu.'},
-      {start: 2.4, end: 6.0, text: 'Cuba semak ruang tiga ratus sebulan—enam peratus.'},
-      {start: 6.0, end: 10.6, text: 'Itu bajet permulaan untuk dinilai, bukan jaminan semua manfaat cukup.'},
-      {start: 10.6, end: 13.2, text: 'Medical, hibah dan penyakit kritikal:'},
-      {start: 13.2, end: 16.6, text: 'semak ikut umur, kesihatan, tanggungan dan kemampuan.'},
+      {start: 0.2, end: 2.4, text: 'Contoh gaji *lima ribu.*'},
+      {start: 2.4, end: 6.0, text: 'Cuba semak ruang *tiga ratus* sebulan—*enam peratus.*'},
+      {start: 6.0, end: 10.6, text: 'Itu bajet permulaan untuk *dinilai,* bukan jaminan semua manfaat cukup.'},
+      {start: 10.6, end: 13.2, text: '*Medical, hibah* dan *penyakit kritikal:*'},
+      {start: 13.2, end: 16.6, text: 'semak ikut umur, kesihatan, *tanggungan* dan *kemampuan.*'},
     ] as Caption[],
     narration:
       'Contoh gaji lima ribu. Cuba semak ruang tiga ratus sebulan—enam peratus. Itu bajet permulaan untuk dinilai, bukan jaminan semua manfaat cukup. Medical, hibah dan penyakit kritikal: semak ikut umur, kesihatan, tanggungan dan kemampuan.',
   },
   {
     id: 'Ch5NextStep',
+    scenes: [{file: 's16', start: 0, cam: 'in', tin: 'fade'}, {file: 's17', start: 5.4, cam: 'right', tin: 'cross'}, {file: 's18', start: 9.0, cam: 'in', tin: 'thread', dim: 0.4}, {file: 's19', start: 13.4, cam: 'in', tin: 'cross'}, {file: 's20', start: 15.0, cam: 'out', tin: 'flash', dim: 0.3}] as Scene[],
     number: '05',
     name: 'Langkah seterusnya',
     durationSec: 19,
@@ -255,13 +287,13 @@ export const chapters = [
       wise: 'You are wise—you can start.',
     },
     captions: [
-      {start: 0.2, end: 2.4, text: 'Kalau ada pasangan atau anak, fikir:'},
-      {start: 2.4, end: 5.4, text: 'kalau pendapatan kita terhenti, apa pelan mereka?'},
-      {start: 5.4, end: 9.0, text: 'Bantuan orang ramai boleh membantu, tapi sukar dijangka.'},
-      {start: 9.0, end: 10.8, text: 'Hari ini, semak satu komitmen.'},
-      {start: 10.8, end: 12.4, text: 'Kurangkan satu kehendak.'},
-      {start: 12.4, end: 13.4, text: 'Mula kecil.'},
-      {start: 13.4, end: 15.4, text: 'You are wise—you can start.'},
+      {start: 0.2, end: 2.4, text: 'Kalau ada *pasangan* atau *anak,* fikir:'},
+      {start: 2.4, end: 5.4, text: 'kalau pendapatan kita terhenti, apa *pelan mereka?*'},
+      {start: 5.4, end: 9.0, text: 'Bantuan orang ramai boleh membantu, tapi *sukar dijangka.*'},
+      {start: 9.0, end: 10.8, text: 'Hari ini, *semak satu komitmen.*'},
+      {start: 10.8, end: 12.4, text: '*Kurangkan* satu kehendak.'},
+      {start: 12.4, end: 13.4, text: '*Mula kecil.*'},
+      {start: 13.4, end: 15.4, text: 'You are *wise*—you *can start.*'},
     ] as Caption[],
     narration:
       'Kalau ada pasangan atau anak, fikir: kalau pendapatan kita terhenti, apa pelan mereka? Bantuan orang ramai boleh membantu, tapi sukar dijangka. Hari ini, semak satu komitmen. Kurangkan satu kehendak. Mula kecil. You are wise—you can start.',

@@ -1,4 +1,4 @@
-import {Easing, interpolate} from 'remotion';
+import {Easing, interpolate, spring} from 'remotion';
 import {video} from '../config';
 
 export const sec = (s: number) => Math.round(s * video.fps);
@@ -40,3 +40,10 @@ export const pop = (frame: number, inSec: number) => {
 };
 
 export const formatRM = (n: number) => 'RM' + Math.round(n).toLocaleString('en-US');
+
+/** Bouncy 0 → ~1 spring starting at `startSec`. */
+export const bounce = (frame: number, startSec: number, damping = 11) =>
+  spring({frame: frame - sec(startSec), fps: video.fps, config: {damping, stiffness: 170, mass: 0.8}});
+
+/** Interpolate an arm pose. */
+export const pose = (a: [number, number], b: [number, number], t: number): [number, number] => [lerp(a[0], b[0], t), lerp(a[1], b[1], t)];

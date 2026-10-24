@@ -10,8 +10,9 @@ const ts = (s, sep) => {
   const sec = String(Math.floor((ms % 60000) / 1000)).padStart(2, '0');
   return `${h}:${m}:${sec}${sep}${String(ms % 1000).padStart(3, '0')}`;
 };
-const srt = (cues) => cues.map((c, i) => `${i + 1}\n${ts(c.start, ',')} --> ${ts(c.end, ',')}\n${c.text}\n`).join('\n');
-const vtt = (cues) => 'WEBVTT\n\n' + cues.map((c) => `${ts(c.start, '.')} --> ${ts(c.end, '.')}\n${c.text}\n`).join('\n');
+const clean = (t) => t.replace(/\*/g, '');
+const srt = (cues) => cues.map((c, i) => `${i + 1}\n${ts(c.start, ',')} --> ${ts(c.end, ',')}\n${clean(c.text)}\n`).join('\n');
+const vtt = (cues) => 'WEBVTT\n\n' + cues.map((c) => `${ts(c.start, '.')} --> ${ts(c.end, '.')}\n${clean(c.text)}\n`).join('\n');
 
 fs.mkdirSync('subtitles', {recursive: true});
 const all = [];

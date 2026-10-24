@@ -2,27 +2,27 @@ import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {colors} from '../config';
 
-/** Deep navy field with slow-drifting warm glows and a faint dot grid. */
-export const Background: React.FC = () => {
+/** Warm paper background with soft drifting colour blobs and tiny sparkles. */
+export const Background: React.FC<{tint?: string}> = ({tint = colors.gold}) => {
   const f = useCurrentFrame();
-  const drift = Math.sin(f / 90) * 40;
-  const drift2 = Math.cos(f / 110) * 50;
+  const d1 = Math.sin(f / 80) * 30;
+  const d2 = Math.cos(f / 95) * 36;
   return (
-    <AbsoluteFill style={{backgroundColor: colors.navy}}>
+    <AbsoluteFill style={{backgroundColor: colors.cream}}>
+      <svg width={1080} height={1920} style={{position: 'absolute', inset: 0}}>
+        <defs>
+          <filter id="blur80">
+            <feGaussianBlur stdDeviation="70" />
+          </filter>
+        </defs>
+        <circle cx={900 + d1} cy={300 + d2} r={300} fill={tint} opacity={0.32} filter="url(#blur80)" />
+        <circle cx={120 - d2} cy={1650 + d1} r={340} fill={colors.red} opacity={0.14} filter="url(#blur80)" />
+        <circle cx={150 + d2} cy={700 - d1} r={200} fill={colors.sky} opacity={0.5} filter="url(#blur80)" />
+      </svg>
       <AbsoluteFill
         style={{
-          background: `radial-gradient(900px 900px at ${780 + drift}px ${260 + drift2}px, rgba(211,174,98,0.16), transparent 70%),
-            radial-gradient(1000px 1000px at ${180 - drift2}px ${1700 + drift}px, rgba(210,86,74,0.10), transparent 70%),
-            linear-gradient(180deg, ${colors.navy} 0%, ${colors.navyDeep} 100%)`,
-        }}
-      />
-      <AbsoluteFill
-        style={{
-          backgroundImage: 'radial-gradient(rgba(245,238,223,0.07) 1.6px, transparent 1.6px)',
-          backgroundSize: '44px 44px',
-          backgroundPosition: `${(f * 0.15) % 44}px ${(f * 0.3) % 44}px`,
-          maskImage: 'linear-gradient(180deg, transparent 0%, black 30%, black 70%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(180deg, transparent 0%, black 30%, black 70%, transparent 100%)',
+          backgroundImage: 'radial-gradient(rgba(20,37,74,0.07) 1.4px, transparent 1.6px)',
+          backgroundSize: '26px 26px',
         }}
       />
     </AbsoluteFill>

@@ -15,8 +15,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@fontsource/fraunces": "5.2.5",
-    "@fontsource/inter": "5.2.5",
+    "@fontsource/anton": "^5.2.5",
+    "@fontsource/poppins": "^5.2.5",
     "@remotion/cli": "4.0.527",
     "@remotion/shapes": "4.0.527",
     "react": "19.1.0",

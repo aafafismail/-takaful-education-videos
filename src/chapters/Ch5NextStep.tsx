@@ -2,126 +2,53 @@ import React from 'react';
 import {useCurrentFrame} from 'remotion';
 import {chapters, colors, cta, fonts, safe} from '../config';
 import {Shell} from '../components/Shell';
-import {Chip, Headline, Note} from '../components/Text';
-import {Family, IconCheck} from '../components/Icons';
-import {prog, rise, vis} from '../lib/anim';
+import {BigTitle, Glass, Pill} from '../components/Glass';
+import {IconCheck} from '../components/Icons';
+import {bounce, prog, rise, vis} from '../lib/anim';
 
 const C = chapters[4];
 const B = C.beats;
 const T = C.text;
+const W = safe.right - safe.left;
 
 export const Ch5NextStep: React.FC = () => {
   const f = useCurrentFrame();
-  const t = f / 30;
   const itemStarts = [B.checklist, B.item2, B.item3];
-  const familyIn = prog(f, B.family, 0.9);
-
   return (
     <Shell chapter={C} holdEnd>
-      {/* Phase A — family question */}
-      <div style={{opacity: vis(f, B.family, B.checklist - 0.4)}}>
-        <Headline top={365} size={62}>
-          <div style={rise(f, B.family + 0.1)}>{T.question1}</div>
-          <div style={{...rise(f, B.question), color: colors.gold, fontStyle: 'italic'}}>{T.question2}</div>
-        </Headline>
-        <div
-          style={{
-            position: 'absolute',
-            top: 600,
-            left: 540 - 300,
-            opacity: familyIn,
-            transform: `translateY(${(1 - familyIn) * 40}px) scale(${0.94 + 0.06 * familyIn})`,
-          }}
-        >
-          <Family width={600} t={t} />
-        </div>
-        <Note top={1110} style={{...rise(f, B.crowd), fontSize: 34, color: colors.cream}}>
-          {T.crowd}
-        </Note>
-      </div>
-
-      {/* Phase B — checklist */}
-      <div style={{opacity: vis(f, B.checklist, B.end - 0.2)}}>
-        <div style={{position: 'absolute', top: 380, width: 1080, textAlign: 'center', ...rise(f, B.checklist)}}>
-          <Chip>{T.checklistTitle}</Chip>
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            top: 480,
-            left: safe.left,
-            width: safe.right - safe.left,
-            boxSizing: 'border-box',
-            borderRadius: 34,
-            background: colors.navySoft,
-            border: `2px solid ${colors.navyLine}`,
-            padding: '30px 34px',
-            ...rise(f, B.checklist + 0.1),
-          }}
-        >
+      {/* checklist */}
+      <div style={{position: 'absolute', top: 400, left: safe.left, width: W, opacity: vis(f, B.checklist + 0.2, B.end - 0.3), transform: `scale(${0.9 + 0.1 * bounce(f, B.checklist + 0.2, 14)})`}}>
+        <Glass strong style={{padding: '30px 36px 20px'}}>
+          <Pill>{T.checklistTitle}</Pill>
           {T.checklist.map((item, i) => {
             const s = itemStarts[i];
-            const done = prog(f, s + 0.5, 0.5);
-            const active = vis(f, s);
+            const done = prog(f, s + 0.4, 0.5);
             return (
-              <div
-                key={item}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 28,
-                  height: 150,
-                  borderTop: i === 0 ? 'none' : `1px solid ${colors.navyLine}`,
-                  opacity: 0.35 + 0.65 * active,
-                }}
-              >
-                <IconCheck size={72} done={done} />
-                <div style={{fontFamily: fonts.display, fontWeight: 600, fontSize: 48, color: colors.cream, lineHeight: 1.1}}>
-                  <span style={{color: colors.gold}}>{i + 1}.</span> {item}
+              <div key={item} style={{display: 'flex', alignItems: 'center', gap: 24, height: 128, borderTop: i ? '2px dashed rgba(255,255,255,0.18)' : 'none', opacity: 0.4 + 0.6 * vis(f, s, undefined, 0.3)}}>
+                <IconCheck size={70} done={done} color={colors.captionHighlight} />
+                <div style={{fontSize: 44, fontWeight: 800}}>
+                  <span style={{color: colors.captionHighlight}}>{i + 1}.</span> {item}
                 </div>
               </div>
             );
           })}
-        </div>
-        <Headline top={1060} size={62} color={colors.gold} italic style={rise(f, B.wise)}>
-          {T.wise}
-        </Headline>
+        </Glass>
       </div>
 
-      {/* Phase C — calm end card (held to the final frame) */}
-      <div style={{opacity: vis(f, B.end, undefined, 0.8)}}>
-        <Headline top={610} size={98} style={{whiteSpace: 'nowrap'}}>
-          <div style={rise(f, B.end)}>{cta.line1}</div>
-          <div style={{...rise(f, B.end + 0.5), color: colors.gold, fontStyle: 'italic', marginTop: 10}}>{cta.line2}</div>
-        </Headline>
-        <div
-          style={{
-            position: 'absolute',
-            top: 920,
-            left: 540 - 120 * prog(f, B.end + 0.9, 0.8),
-            width: 240 * prog(f, B.end + 0.9, 0.8),
-            height: 3,
-            background: colors.goldSoft,
-          }}
-        />
-        <div style={{position: 'absolute', top: 975, width: 1080, display: 'flex', justifyContent: 'center', ...rise(f, B.end + 1.1)}}>
-          <div
-            style={{
-              fontFamily: fonts.body,
-              fontWeight: 700,
-              fontSize: 42,
-              color: colors.navy,
-              background: colors.gold,
-              borderRadius: 999,
-              padding: '22px 44px',
-            }}
-          >
-            {cta.action}
-          </div>
+      {/* calm end card — holds to the final frame */}
+      <div style={{position: 'absolute', inset: 0, opacity: vis(f, B.end + 0.2, undefined, 0.8)}}>
+        <BigTitle size={108} style={{position: 'absolute', top: 480, whiteSpace: 'nowrap', left: safe.left, width: W, textAlign: 'center', ...rise(f, B.end + 0.2)}}>
+          {cta.line1}
+        </BigTitle>
+        <BigTitle size={108} color={colors.captionHighlight} style={{position: 'absolute', top: 600, whiteSpace: 'nowrap', left: safe.left, width: W, textAlign: 'center', ...rise(f, B.end + 0.6)}}>
+          {cta.line2}
+        </BigTitle>
+        <div style={{position: 'absolute', top: 820, left: safe.left, width: W, textAlign: 'center', transform: `scale(${bounce(f, B.end + 1.1, 12)})`}}>
+          <Pill style={{fontSize: 42, padding: '18px 40px', boxShadow: '0 12px 30px rgba(0,0,0,0.4)'}}>{cta.action}</Pill>
         </div>
-        <Note top={1110} style={{...rise(f, B.end + 1.4), fontSize: 32, letterSpacing: 6, textTransform: 'uppercase', fontWeight: 600, color: colors.cream}}>
+        <div style={{position: 'absolute', top: 950, left: safe.left, width: W, textAlign: 'center', fontFamily: fonts.body, fontWeight: 700, fontSize: 34, letterSpacing: 6, textTransform: 'uppercase', color: '#FFFFFF', textShadow: '0 2px 10px rgba(0,0,0,0.7)', ...rise(f, B.end + 1.4)}}>
           {cta.name}
-        </Note>
+        </div>
       </div>
     </Shell>
   );
