@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "historyId": "28a611a9-020e-4b11-ba93-bb6844f995de",
+  "currentRevision": "c12685e2-87f0-4dcd-910d-918668c9c4da",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/1b/1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060"
+    },
+    "CLAUDE.md": {
+      "hash": "1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/1b/1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060"
+    },
+    "SPEC.md": {
+      "hash": "7e4f63447019a8afd9d06986ae819cefe002f29e218f7d5a8369ad419de5cb96",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/7e/7e4f63447019a8afd9d06986ae819cefe002f29e218f7d5a8369ad419de5cb96"
+    },
+    "assets/fonts/CAVEAT-OFL.txt": {
+      "hash": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/18/18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3"
+    },
+    "assets/fonts/caveat-700.woff2": {
+      "hash": "8ac2e65ad54d1facf37cc3d3f4b52302a37ca04229dcccf1671abf4ff612f89e",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/8a/8ac2e65ad54d1facf37cc3d3f4b52302a37ca04229dcccf1671abf4ff612f89e"
+    },
+    "assets/img/cup.png": {
+      "hash": "86d9be38a3d548034921c3743cb841b0e1b9afb750529aa83259cff967ac0edf",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/86/86d9be38a3d548034921c3743cb841b0e1b9afb750529aa83259cff967ac0edf"
+    },
+    "assets/img/emoji-1f602.svg": {
+      "hash": "fcd9fc3a37c5fe5d5dc9151289c1f0a7bf76444d2cdf455e9263a670a1642e54",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/fc/fcd9fc3a37c5fe5d5dc9151289c1f0a7bf76444d2cdf455e9263a670a1642e54"
+    },
+    "assets/img/scene1-cafe.jpg": {
+      "hash": "48decfdbf9ba3c33b4b07351e34873db6e0d8a85867dc3ee633ad89b488c5848",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/48/48decfdbf9ba3c33b4b07351e34873db6e0d8a85867dc3ee633ad89b488c5848"
+    },
+    "assets/img/scene2-budget.jpg": {
+      "hash": "351631d8658ccab35b60cfcacca08aa051a915261404dde70301d19c85d224b6",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/35/351631d8658ccab35b60cfcacca08aa051a915261404dde70301d19c85d224b6"
+    },
+    "assets/img/scene3-counter.jpg": {
+      "hash": "b3734ffbd86f80ada03a223003a64a2233ac82e5c942b1535fcbc1e39053cb7b",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/b3/b3734ffbd86f80ada03a223003a64a2233ac82e5c942b1535fcbc1e39053cb7b"
+    },
+    "assets/img/scene4-kitchen.jpg": {
+      "hash": "f47d2a562509594aae5270c22af07b928e2e3645d239b9790fd2b5906b8790f0",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/f4/f47d2a562509594aae5270c22af07b928e2e3645d239b9790fd2b5906b8790f0"
+    },
+    "assets/img/scene5-two-cups.jpg": {
+      "hash": "567505fba9a13169b792c67cf45ccc2f95abac23369c37a3d228c82d2ddd8783",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/56/567505fba9a13169b792c67cf45ccc2f95abac23369c37a3d228c82d2ddd8783"
+    },
+    "assets/img/scene6-family.jpg": {
+      "hash": "11e66d7f7945cd9c03b6f4d54b8c7b6e0308ef96e2676e089d9a15e8f9f83f0c",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/11/11e66d7f7945cd9c03b6f4d54b8c7b6e0308ef96e2676e089d9a15e8f9f83f0c"
+    },
+    "assets/sfx/CREDITS.md": {
+      "hash": "79590c7738b0427b10f362f76b02cfd2643158a40e1d5fd787f9ac6b33bcf4ce",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/79/79590c7738b0427b10f362f76b02cfd2643158a40e1d5fd787f9ac6b33bcf4ce"
+    },
+    "assets/sfx/chime.mp3": {
+      "hash": "74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/74/74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12"
+    },
+    "assets/sfx/click-soft.mp3": {
+      "hash": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/07/075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    "assets/sfx/key-press.mp3": {
+      "hash": "bcc892df0898bf466162f14233c3e92a8c1ea351f6affd8a3a7e56c9a760bb72",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/bc/bcc892df0898bf466162f14233c3e92a8c1ea351f6affd8a3a7e56c9a760bb72"
+    },
+    "assets/sfx/pop.mp3": {
+      "hash": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/19/19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352"
+    },
+    "assets/sfx/whoosh-short.mp3": {
+      "hash": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/c2/c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    "assets/sfx/whoosh.mp3": {
+      "hash": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/c2/c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    "assets/vendor/gsap.min.js": {
+      "hash": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/c1/c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    "compositions/captions.html": {
+      "hash": "ba7b74d24e0da110fc161ef0886741531fc18cba3a80e330f0992af20eecd351",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/ba/ba7b74d24e0da110fc161ef0886741531fc18cba3a80e330f0992af20eecd351"
+    },
+    "compositions/s1-coffee.html": {
+      "hash": "af2463af19353eb131ad3dfe142474899cd0e44fbeaaea5ea08213325da42b15",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/af/af2463af19353eb131ad3dfe142474899cd0e44fbeaaea5ea08213325da42b15"
+    },
+    "compositions/s2-budget.html": {
+      "hash": "1c56e18532dfb0dc1c51ee896a448d3fcd993fd20ce69104075e61a1145cab0a",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/1c/1c56e18532dfb0dc1c51ee896a448d3fcd993fd20ce69104075e61a1145cab0a"
+    },
+    "compositions/s3-change.html": {
+      "hash": "29a7e52c7120520790473ede5872bc0d243f3e3cb1d8d403f955e7e8b7704a5b",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/29/29a7e52c7120520790473ede5872bc0d243f3e3cb1d8d403f955e7e8b7704a5b"
+    },
+    "compositions/s4-home.html": {
+      "hash": "389d2cb85e08726c0e0c10748172186dc83d7b14b2e71a3a8abca76a409355b6",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/38/389d2cb85e08726c0e0c10748172186dc83d7b14b2e71a3a8abca76a409355b6"
+    },
+    "compositions/s5-americano.html": {
+      "hash": "2cb48256e20bc28a68e9f64c643a6f8b61f54d24af7d21787210d5cb3aaebcd3",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/2c/2cb48256e20bc28a68e9f64c643a6f8b61f54d24af7d21787210d5cb3aaebcd3"
+    },
+    "compositions/s6-room.html": {
+      "hash": "d4f0327ec4584fcac1e45aa6d8b7cc0f9bc4e3d8966ead40c44e12b5ab4e03c2",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/d4/d4f0327ec4584fcac1e45aa6d8b7cc0f9bc4e3d8966ead40c44e12b5ab4e03c2"
+    },
+    "hyperframes.json": {
+      "hash": "35a6d4ea79ebe911f0d81705f7aace5d8ff0316b745b0311d56af50c9c237cb7",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/35/35a6d4ea79ebe911f0d81705f7aace5d8ff0316b745b0311d56af50c9c237cb7"
+    },
+    "index.html": {
+      "hash": "95270e7736f955d2c0b122d8c06e0018767793bbcc2897d0f1755a8d54b593e5",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/95/95270e7736f955d2c0b122d8c06e0018767793bbcc2897d0f1755a8d54b593e5"
+    },
+    "meta.json": {
+      "hash": "3fe6e432655ff329293d6be35b0bcbcff88b7e6304d3208f78c9850bc98174ea",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/3f/3fe6e432655ff329293d6be35b0bcbcff88b7e6304d3208f78c9850bc98174ea"
+    },
+    "package.json": {
+      "hash": "4186f052509a8aeb64f3e48b6d520c186e8b76da8eb09df2fbbf6940bc9abafb",
+      "content": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/41/4186f052509a8aeb64f3e48b6d520c186e8b76da8eb09df2fbbf6940bc9abafb"
+    }
+  },
+  "revisions": {
+    "c12685e2-87f0-4dcd-910d-918668c9c4da": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792937895090,
+      "endedAt": 1792937895107,
+      "files": {
+        "compositions/s3-change.html": {
+          "before": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/ac/ac57ba137e131b67ebabae1068f3803130a44f4d509620929b54c9367bdef84c",
+          "after": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/29/29a7e52c7120520790473ede5872bc0d243f3e3cb1d8d403f955e7e8b7704a5b"
+        },
+        "compositions/s6-room.html": {
+          "before": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/f4/f47a6e95464dc640a59f9e8ae6be5e3a7faedd1d8687382bd73f00b48e54cab2",
+          "after": "/root/.cache/hyperframes/history/28a611a9-020e-4b11-ba93-bb6844f995de/blobs/d4/d4f0327ec4584fcac1e45aa6d8b7cc0f9bc4e3d8966ead40c44e12b5ab4e03c2"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "64695528-86c3-4585-89d6-5585a5899962"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "64695528-86c3-4585-89d6-5585a5899962",
+        "scope": "project",
+        "report": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/checks/64695528-86c3-4585-89d6-5585a5899962.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792937836160,
+        "contentHash": "95b0fe3e36a8af3d75a95dec3e5eb67c59aa829b06edce6bcca788c2460f5992",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "c12685e2-87f0-4dcd-910d-918668c9c4da",
+      "id": "d433d010-94b6-4b69-ae14-0ef97464a833-2"
+    },
+    "revisions": {
+      "c12685e2-87f0-4dcd-910d-918668c9c4da": [
+        {
+          "scope": "full",
+          "id": "d433d010-94b6-4b69-ae14-0ef97464a833-0",
+          "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/ba739c0f-aa87-4a9b-b205-e4d83b59e9ad/frame-00-at-22s.png",
+          "time": 22,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792937901033,
+          "contentHash": "5f133a04814eee20ee373294941df11decebb1280c968953550ddb57cf61a65f",
+          "revision": "c12685e2-87f0-4dcd-910d-918668c9c4da",
+          "inputFingerprint": "910ad60af477f78263bf65921059b4fd96a144281cb2a314e98693e8f1acf85c",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "d433d010-94b6-4b69-ae14-0ef97464a833-1",
+          "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/ba739c0f-aa87-4a9b-b205-e4d83b59e9ad/frame-01-at-31.8s.png",
+          "time": 31.8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792937901033,
+          "contentHash": "d1a84732e58aa57c6eb6940f910fcca3588d26eac549ebe409955c159baaf5a8",
+          "revision": "c12685e2-87f0-4dcd-910d-918668c9c4da",
+          "inputFingerprint": "910ad60af477f78263bf65921059b4fd96a144281cb2a314e98693e8f1acf85c",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "d433d010-94b6-4b69-ae14-0ef97464a833-2",
+          "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/ba739c0f-aa87-4a9b-b205-e4d83b59e9ad/frame-02-at-66s.png",
+          "time": 66,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792937901033,
+          "contentHash": "548a61bb587fce8a1269eccbb3c281e7a0c15f16888945da8b40127add65bea3",
+          "revision": "c12685e2-87f0-4dcd-910d-918668c9c4da",
+          "inputFingerprint": "910ad60af477f78263bf65921059b4fd96a144281cb2a314e98693e8f1acf85c",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-0",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-00-at-0s.png",
+        "time": 0,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "1f1197dd59289d041a11793ce392431c3d6f6f05ea0287e67231f207d4950d44",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-1",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-01-at-2s.png",
+        "time": 2,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "62d57beaa61d04b81a400f018b7385329c6481fc82d2215e1401454d55bcfe5b",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-2",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-02-at-6s.png",
+        "time": 6,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "47849019545d2be1e7ba4b032de07024fa3520711d22f54cf6a2b811c22c5818",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-3",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-03-at-13.5s.png",
+        "time": 13.5,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "f40de0d458662d13721defdbd6014dd89f377b2f7b4aa1b3264a7107fd54dfdd",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-4",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-04-at-17s.png",
+        "time": 17,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "87f8f2dfdf42b909fc1faf540d854119f75d6ed7fba8e47d8f1d908013ade4da",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-5",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-05-at-22s.png",
+        "time": 22,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "bfa0196f07e2431fbfd6179b053cde85713d4fa84b5853b2bf2bb1b01bcdef5b",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-6",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-06-at-27.5s.png",
+        "time": 27.5,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "7d1943b1c1078d7cadecf3dfe193b377631bbdbf4aa7fde5f1406d19236251e1",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-7",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-07-at-31.8s.png",
+        "time": 31.8,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "6ae1b6ffcb8bb6b665f70c861e44e2f5275dffecfc74c1780b302833811b2e14",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-8",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-08-at-40s.png",
+        "time": 40,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "bed9ffb46e7eeab65a55be679ced8910c3fe1309883a87433fc2c9484036fc7b",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-9",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-09-at-44s.png",
+        "time": 44,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "d7d4c5ff2f0a460ead9b2a20daab4070700ba1ba040506a57d0c6f9edb95f881",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-10",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-10-at-48s.png",
+        "time": 48,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "71d3588421fc53bb3a008de7e24ca9741c807c6ac03013aabdeb94b5a357e892",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-11",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-11-at-50.5s.png",
+        "time": 50.5,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "94d731848c7abe9b273e3fc995dae8f34b1c7a561dd396b32047af44fb38a0bc",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-12",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-12-at-55.5s.png",
+        "time": 55.5,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865854,
+        "contentHash": "86cfbd0da96fd1bb9d51a2b1716a169226b6d317c88e6cb9dd64921a4793f09e",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-13",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-13-at-57.4s.png",
+        "time": 57.4,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865855,
+        "contentHash": "56b58ab459e89b19f49a1d48edc276bbe31f07efce083d90dae5f795f52eb04b",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a761d868-b853-41dc-8cef-24d3b42fe749-14",
+        "image": "/home/user/-takaful-education-videos/projects/latte-hyperframes/.hyperframes/artifacts/snapshots/06ed4b9e-a21a-4cdb-b3fb-4bae91ff23ae/frame-14-at-66s.png",
+        "time": 66,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792937865855,
+        "contentHash": "7b40921b24f20cce4a3ce08378dcfb34f59af579ecfd2cf7651cd22b0168fb5d",
+        "revision": null,
+        "inputFingerprint": "96ad0ffadd7e1942d7305c2aa808c42a195b1ca6f190ac52ee3f2263489d70c2",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  }
+}

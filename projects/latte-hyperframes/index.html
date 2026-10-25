@@ -1,0 +1,171 @@
+<!doctype html>
+<html
+  lang="ms"
+  data-resolution="portrait"
+  data-composition-variables='[
+    {"id":"color-ink","type":"color","label":"Paper ink","default":"#2B2622"},
+    {"id":"color-pen","type":"color","label":"Pen ink","default":"#1E3A8A"},
+    {"id":"color-accent","type":"color","label":"Accent (keywords, highlighter)","default":"#FFC93C"},
+    {"id":"cta","type":"string","label":"CTA","default":"REPLY ‘SEMAK’"},
+    {"id":"name","type":"string","label":"Name","default":"AFAF ISMAIL"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Caveat";
+        src: url("assets/fonts/caveat-700.woff2") format("woff2");
+        font-weight: 700;
+      }
+      :root {
+        --color-ink: #2b2622;
+        --color-pen: #1e3a8a;
+        --color-accent: #ffc93c;
+        --paper-thermal: #f7f2e7;
+        --paper-note: #fbf6ea;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #1a120b;
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+      }
+
+      /* ---------- shared paper objects ---------- */
+      .cam {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .cam img.plate {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1080px;
+        height: 1920px;
+        object-fit: cover;
+      }
+      .receipt {
+        position: absolute;
+        background: var(--paper-thermal);
+        color: var(--color-ink);
+        font-family: "Space Mono", monospace;
+        font-weight: 700;
+        box-shadow: 0 18px 28px rgba(45, 25, 8, 0.38);
+        /* torn zig-zag bottom edge */
+        -webkit-mask: linear-gradient(#000 0 0) top / 100% calc(100% - 14px) no-repeat,
+          conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 28px 14px repeat-x;
+        mask: linear-gradient(#000 0 0) top / 100% calc(100% - 14px) no-repeat,
+          conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 28px 14px repeat-x;
+      }
+      .receipt .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        white-space: nowrap;
+      }
+      .note {
+        position: absolute;
+        background-color: var(--paper-note);
+        background-image: linear-gradient(90deg, transparent 94px, #e5a6a0 94px 97px, transparent 97px),
+          repeating-linear-gradient(transparent 0 63px, #bfd0e6 63px 65px);
+        box-shadow: 0 20px 34px rgba(45, 25, 8, 0.36);
+        border-radius: 6px;
+        color: var(--color-pen);
+      }
+      .hand {
+        font-family: "Caveat", cursive;
+        font-weight: 700;
+        color: var(--color-pen);
+        white-space: nowrap;
+        line-height: 1;
+      }
+      .hl {
+        position: relative;
+        isolation: isolate;
+      }
+      .hl > .swipe {
+        position: absolute;
+        left: -8px;
+        right: -8px;
+        top: 52%;
+        height: 44%;
+        background: var(--color-accent);
+        opacity: 0.85;
+        z-index: -1;
+        transform-origin: left center;
+        border-radius: 4px;
+      }
+      .display {
+        font-family: "Archivo Black", sans-serif;
+        color: #fff;
+        text-align: center;
+        letter-spacing: -0.01em;
+        line-height: 1.06;
+      }
+      .scrim {
+        background: rgba(24, 12, 4, 0.42);
+        border-radius: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="68" data-width="1080" data-height="1920">
+      <!-- scenes -->
+      <div id="s1" data-composition-id="s1" data-composition-src="compositions/s1-coffee.html" data-start="0" data-duration="8" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="s2" data-composition-id="s2" data-composition-src="compositions/s2-budget.html" data-start="8" data-duration="12" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 2"></div>
+      <div id="s3" data-composition-id="s3" data-composition-src="compositions/s3-change.html" data-start="20" data-duration="13" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 3"></div>
+      <div id="s4" data-composition-id="s4" data-composition-src="compositions/s4-home.html" data-start="33" data-duration="13" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 4"></div>
+      <div id="s5" data-composition-id="s5" data-composition-src="compositions/s5-americano.html" data-start="46" data-duration="7" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 5"></div>
+      <div id="s6" data-composition-id="s6" data-composition-src="compositions/s6-room.html" data-start="53" data-duration="15" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 6"></div>
+      <!-- captions (narration subtitles) -->
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="68" data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index: 20"></div>
+
+      <!-- sound effects (Pixabay licence; see assets/sfx/CREDITS.md) -->
+      <audio id="sfx-zoom" src="assets/sfx/whoosh.mp3" data-start="7.6" data-duration="0.57" data-volume="0.45" data-track-index="10"></audio>
+      <audio id="sfx-page1" src="assets/sfx/click-soft.mp3" data-start="9.3" data-duration="0.36" data-volume="0.5" data-track-index="11"></audio>
+      <audio id="sfx-whip1" src="assets/sfx/whoosh-short.mp3" data-start="19.75" data-duration="0.57" data-volume="0.45" data-track-index="10"></audio>
+      <audio id="sfx-tick1" src="assets/sfx/key-press.mp3" data-start="20.9" data-duration="0.43" data-volume="0.3" data-track-index="12"></audio>
+      <audio id="sfx-tick2" src="assets/sfx/key-press.mp3" data-start="21.1" data-duration="0.43" data-volume="0.25" data-track-index="13"></audio>
+      <audio id="sfx-card" src="assets/sfx/click-soft.mp3" data-start="24.9" data-duration="0.36" data-volume="0.5" data-track-index="11"></audio>
+      <audio id="sfx-pop1" src="assets/sfx/pop.mp3" data-start="25.05" data-duration="0.72" data-volume="0.32" data-track-index="14"></audio>
+      <audio id="sfx-pop2" src="assets/sfx/pop.mp3" data-start="25.47" data-duration="0.72" data-volume="0.28" data-track-index="15"></audio>
+      <audio id="sfx-pop3" src="assets/sfx/pop.mp3" data-start="25.89" data-duration="0.72" data-volume="0.32" data-track-index="14"></audio>
+      <audio id="sfx-pop4" src="assets/sfx/pop.mp3" data-start="26.31" data-duration="0.72" data-volume="0.28" data-track-index="15"></audio>
+      <audio id="sfx-pop5" src="assets/sfx/pop.mp3" data-start="26.73" data-duration="0.72" data-volume="0.32" data-track-index="14"></audio>
+      <audio id="sfx-pop6" src="assets/sfx/pop.mp3" data-start="27.15" data-duration="0.72" data-volume="0.28" data-track-index="15"></audio>
+      <audio id="sfx-pop7" src="assets/sfx/pop.mp3" data-start="27.57" data-duration="0.72" data-volume="0.32" data-track-index="14"></audio>
+      <audio id="sfx-pop8" src="assets/sfx/pop.mp3" data-start="27.99" data-duration="0.72" data-volume="0.36" data-track-index="15"></audio>
+      <audio id="sfx-tick3" src="assets/sfx/key-press.mp3" data-start="28.25" data-duration="0.43" data-volume="0.3" data-track-index="12"></audio>
+      <audio id="sfx-tick4" src="assets/sfx/key-press.mp3" data-start="28.45" data-duration="0.43" data-volume="0.25" data-track-index="13"></audio>
+      <audio id="sfx-cal" src="assets/sfx/click-soft.mp3" data-start="29.35" data-duration="0.36" data-volume="0.5" data-track-index="11"></audio>
+      <audio id="sfx-note" src="assets/sfx/click-soft.mp3" data-start="37.75" data-duration="0.36" data-volume="0.5" data-track-index="11"></audio>
+      <audio id="sfx-whip2" src="assets/sfx/whoosh.mp3" data-start="45.75" data-duration="0.57" data-volume="0.4" data-track-index="10"></audio>
+      <audio id="sfx-tag1" src="assets/sfx/key-press.mp3" data-start="46.6" data-duration="0.43" data-volume="0.3" data-track-index="12"></audio>
+      <audio id="sfx-tag2" src="assets/sfx/key-press.mp3" data-start="47.0" data-duration="0.43" data-volume="0.25" data-track-index="13"></audio>
+      <audio id="sfx-beza" src="assets/sfx/pop.mp3" data-start="48.45" data-duration="0.72" data-volume="0.35" data-track-index="14"></audio>
+      <audio id="sfx-page2" src="assets/sfx/click-soft.mp3" data-start="53.35" data-duration="0.36" data-volume="0.5" data-track-index="11"></audio>
+      <audio id="sfx-chime" src="assets/sfx/chime.mp3" data-start="55.4" data-duration="2.5" data-volume="0.4" data-track-index="16"></audio>
+      <audio id="sfx-iris" src="assets/sfx/whoosh-short.mp3" data-start="56.95" data-duration="0.57" data-volume="0.35" data-track-index="10"></audio>
+      <audio id="sfx-cta" src="assets/sfx/pop.mp3" data-start="62.85" data-duration="0.72" data-volume="0.32" data-track-index="14"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>
