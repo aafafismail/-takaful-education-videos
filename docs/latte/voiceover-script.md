@@ -1,29 +1,27 @@
-# Latte & takaful — narration script (68 s)
+# Latte & takaful — narration script (68 s, first-person story)
 
-> ⚠️ **Draft.** I couldn't find your original latte narration in this repo or your Google Drive, so these lines were written from your storyboard. Paste your original wording into `src/latte/config.ts` (`captions` and `narration`) and I'll re-time the scenes to match.
+She tells her own story. Warm, honest and a bit playful, like telling a friend over coffee. No hard sell.
+Record as one file: `public/latte/voiceover.mp3`.
 
-**Voice:** warm, friendly Malaysian woman, conversational and lightly playful. No pressure.
-**Pace:** relaxed. Record as one file: `public/latte/voiceover.mp3`.
-
-| Time | Scene | Line | Delivery |
+| Time | Picture | Line | Delivery |
 |---|---|---|---|
-| 0:00.6 | 1 Coffee moment | Kena stop latte ke kalau nak mula takaful? | Curious, a half-smile. (On screen as the hook.) |
-| 0:04.4 | | Tak semestinya. Jom kira dulu. | Reassuring. |
-| 0:08.6 | 2 Monthly budget | Contoh sumbangan takaful RM100 sebulan. | Clear, steady. |
-| 0:11.4 | | Bahagi 30 hari, lebih kurang RM3.33 sehari. | "tiga ringgit tiga puluh tiga sen". |
-| 0:14.6 | | Ini contoh sahaja—jumlah sebenar ikut pelan, umur dan kesihatan. | Honest, light. |
-| 0:20.4 | 3 Small change | Katakan latte kegemaran kita RM13 secawan. | Playful. |
-| 0:24.6 | | Lapan cawan sebulan, dah RM104. | Counting feel. |
-| 0:29.0 | | Jadi bukan stop semua—cuma kurangkan lapan pembelian. | Emphasise "bukan stop semua". |
-| 0:33.4 | 4 Coffee at home | Atau, buat kopi sendiri di rumah. | Cosy. |
-| 0:37.4 | | Kopi rumah pun ada kos—katakan RM3. | Fair, matter-of-fact. |
-| 0:41.2 | | Jimat RM10 setiap tukar. Sepuluh kali, RM100. | Small win. |
-| 0:46.4 | 5 Americano joke | Atau tukar ke americano—beza RM3.50. | Teasing. |
+| 0:00.6 | Café, collecting her latte | Kena stop latte ke kalau nak mula takaful? | A curious half-smile. (Also on screen as the hook.) |
+| 0:04.4 | Close-up: cup, steam, her face | Itu soalan saya dulu. Latte ni healing kecil saya. | Honest, fond. |
+| 0:08.6 | Home, budget at the table | Malam tu, saya buka bajet bulanan. | Calm, reflective. |
+| 0:11.4 | Close on notebook + phone | Contoh takaful RM100 sebulan… bahagi 30, RM3.33 sehari. | Pleasantly surprised. "tiga ringgit tiga puluh tiga sen". |
+| 0:14.6 | | Itu contoh je—jumlah sebenar ikut pelan, umur dan kesihatan. | Light, honest. |
+| 0:20.4 | Back at the café counter | Esoknya kat kafe, saya tengok harga latte—RM13. | Playful. |
+| 0:24.6 | Eight cups counted | Saya kira… lapan cawan sebulan dah RM104. | Counting, a little "eh!" |
+| 0:29.0 | Calendar, 8 days | Oh. Bukan kena stop semua. Cuma kurangkan lapan kali. | Relief, the realisation. |
+| 0:33.4 | Her kitchen, making coffee | Jadi sesetengah pagi, saya buat kopi sendiri. | Cosy, happy. |
+| 0:37.4 | Close on pouring | Kopi rumah pun ada kos—katakan RM3. | Fair, matter-of-fact. |
+| 0:41.2 | | Setiap tukar jimat RM10. Sepuluh kali, RM100. | Small win. |
+| 0:46.4 | Two cups, playful look | Kadang-kadang tukar ke americano—beza RM3.50. | Teasing herself. |
 | 0:49.8 | | Coffee maths pula! | Laugh lightly. |
-| 0:53.4 | 6 Making room | Yang penting, asingkan RM100 dalam bajet. | Warm, sincere. |
-| 0:57.4 | | Untuk diri, dan untuk keluarga. | Softer. |
-| 1:00.6 | | Tak perlu cut semua. Beri ruang untuk perlindungan. | Calm. (On the end card.) |
-| 1:03.0 | | Nak semak? Reply SEMAK. | Friendly invitation. Then silence over the end card. |
+| 0:53.4 | Budget: "Perlindungan RM100 ✓" | Akhirnya, saya asingkan RM100 untuk perlindungan. | Warm, settled. |
+| 0:57.4 | With her daughter | Sebab ada orang yang saya sayang. | Softer, sincere. |
+| 1:00.6 | End card | Tak perlu cut semua. Beri ruang untuk perlindungan. | Calm. |
+| 1:03.0 | | Nak semak? Reply SEMAK. | Friendly invitation, then silence. |
 
 ## Maths check
 - RM100 ÷ 30 = RM3.333… ≈ **RM3.33** a day

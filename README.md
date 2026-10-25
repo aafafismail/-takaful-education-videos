@@ -88,7 +88,7 @@ A 68-second illustrated story: one consistent character, six painterly scenes, a
 
 - **Edit everything** in `src/latte/config.ts`: prices (all on-screen maths is computed from them), text, timings, camera crops, steam positions, price-tag positions and narration.
 - **Illustrations:** `public/latte/scene1-cafe.jpg` … `scene6-family.jpg` + `cup.png`. Prompts are in `docs/latte/scene-prompts.md`. `npm run latte:placeholders` fills any missing image with a labelled placeholder.
-- **Narration:** `docs/latte/voiceover-script.md` (a draft written from the storyboard; replace it with the original script). Subtitles are built with `npm run subtitles:latte` into `subtitles/latte-takaful.srt`.
+- **Narration:** `docs/latte/voiceover-script.md` (first-person story told by the main character). Subtitles are built with `npm run subtitles:latte` into `subtitles/latte-takaful.srt`.
 - **Render:** `npm run latte:sample` (10 s sample), `npm run latte:render` (full).
 - **Motion:** camera pushes, pans and crops on stills; code-drawn steam, light and dust. There is no character animation. For real sipping or pouring, supply short video clips and they can be cut in.
 - **Emoji:** the 😂 is a Twemoji graphic (CC-BY 4.0, © Twitter/X and contributors), because colour-emoji fonts don't render in headless Chrome.

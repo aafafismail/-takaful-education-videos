@@ -162,31 +162,32 @@ export const audio = {
 export type Cue = {start: number; end: number; text: string};
 
 /**
- * Narration subtitles. Wrap *keywords* for yellow.
- * ⚠️ DRAFT written from the storyboard — paste your original narration here.
+ * Narration subtitles — told by the main character, first person. Wrap *keywords* for yellow.
+ * The hook (0.6–4.2 s) and end card lines are shown as big on-screen text instead.
  */
 export const captions: Cue[] = [
-  {start: 4.4, end: 7.6, text: 'Tak semestinya. *Jom kira* dulu.'},
-  {start: 8.6, end: 11.4, text: 'Contoh sumbangan takaful *RM100 sebulan.*'},
-  {start: 11.4, end: 14.6, text: 'Bahagi 30 hari, lebih kurang *RM3.33 sehari.*'},
-  {start: 14.6, end: 19.6, text: 'Ini contoh sahaja—jumlah sebenar ikut *pelan, umur & kesihatan.*'},
-  {start: 20.4, end: 24.4, text: 'Katakan latte kegemaran kita *RM13* secawan.'},
-  {start: 24.6, end: 28.8, text: 'Lapan cawan sebulan, dah *RM104.*'},
-  {start: 29.0, end: 32.8, text: 'Jadi bukan stop semua—cuma *kurangkan lapan* pembelian.'},
-  {start: 33.4, end: 37.2, text: 'Atau, buat kopi sendiri di *rumah.*'},
-  {start: 37.4, end: 41.0, text: 'Kopi rumah pun ada kos—katakan *RM3.*'},
-  {start: 41.2, end: 45.6, text: 'Jimat RM10 setiap tukar. *Sepuluh kali, RM100.*'},
-  {start: 46.4, end: 49.6, text: 'Atau tukar ke americano—*beza RM3.50.*'},
-  {start: 49.8, end: 52.6, text: '*Coffee maths* pula 😂'},
-  {start: 53.4, end: 57.2, text: 'Yang penting, asingkan *RM100* dalam bajet.'},
-  {start: 57.4, end: 60.4, text: 'Untuk diri, dan untuk *keluarga.*'},
+  {start: 4.4, end: 7.6, text: 'Itu soalan saya dulu. Latte ni *healing kecil* saya.'},
+  {start: 8.6, end: 11.4, text: 'Malam tu, saya buka *bajet bulanan.*'},
+  {start: 11.4, end: 14.6, text: 'Contoh takaful *RM100 sebulan*\u2026 bahagi 30, *RM3.33 sehari.*'},
+  {start: 14.6, end: 19.6, text: 'Itu contoh je\u2014jumlah sebenar ikut *pelan, umur & kesihatan.*'},
+  {start: 20.4, end: 24.4, text: 'Esoknya kat kafe, saya tengok harga latte\u2014*RM13.*'},
+  {start: 24.6, end: 28.8, text: 'Saya kira\u2026 lapan cawan sebulan dah *RM104.*'},
+  {start: 29.0, end: 32.8, text: 'Oh. Bukan kena stop semua. Cuma *kurangkan lapan* kali.'},
+  {start: 33.4, end: 37.2, text: 'Jadi sesetengah pagi, saya buat kopi *sendiri.*'},
+  {start: 37.4, end: 41.0, text: 'Kopi rumah pun ada kos\u2014katakan *RM3.*'},
+  {start: 41.2, end: 45.6, text: 'Setiap tukar jimat RM10. *Sepuluh kali, RM100.*'},
+  {start: 46.4, end: 49.6, text: 'Kadang-kadang tukar ke americano\u2014*beza RM3.50.*'},
+  {start: 49.8, end: 52.6, text: '*Coffee maths* pula \uD83D\uDE02'},
+  {start: 53.4, end: 57.2, text: 'Akhirnya, saya asingkan *RM100* untuk perlindungan.'},
+  {start: 57.4, end: 60.4, text: 'Sebab ada orang yang saya *sayang.*'},
 ];
 
+/** Full narration per scene (for recording). */
 export const narration = [
-  'Kena stop latte ke kalau nak mula takaful? Tak semestinya. Jom kira dulu.',
-  'Contoh sumbangan takaful RM100 sebulan. Bahagi 30 hari, lebih kurang RM3.33 sehari. Ini contoh sahaja—jumlah sebenar ikut pelan, umur dan kesihatan.',
-  'Katakan latte kegemaran kita RM13 secawan. Lapan cawan sebulan, dah RM104. Jadi bukan stop semua—cuma kurangkan lapan pembelian.',
-  'Atau, buat kopi sendiri di rumah. Kopi rumah pun ada kos—katakan RM3. Jimat RM10 setiap tukar. Sepuluh kali, RM100.',
-  'Atau tukar ke americano—beza RM3.50. Coffee maths pula!',
-  'Yang penting, asingkan RM100 dalam bajet. Untuk diri, dan untuk keluarga. Tak perlu cut semua. Beri ruang untuk perlindungan. Nak semak? Reply SEMAK.',
+  'Kena stop latte ke kalau nak mula takaful? Itu soalan saya dulu. Latte ni healing kecil saya.',
+  'Malam tu, saya buka bajet bulanan. Contoh takaful RM100 sebulan… bahagi 30, RM3.33 sehari. Itu contoh je—jumlah sebenar ikut pelan, umur dan kesihatan.',
+  'Esoknya kat kafe, saya tengok harga latte—RM13. Saya kira… lapan cawan sebulan dah RM104. Oh. Bukan kena stop semua. Cuma kurangkan lapan kali.',
+  'Jadi sesetengah pagi, saya buat kopi sendiri. Kopi rumah pun ada kos—katakan RM3. Setiap tukar jimat RM10. Sepuluh kali, RM100.',
+  'Kadang-kadang tukar ke americano—beza RM3.50. Coffee maths pula!',
+  'Akhirnya, saya asingkan RM100 untuk perlindungan. Sebab ada orang yang saya sayang. Tak perlu cut semua. Beri ruang untuk perlindungan. Nak semak? Reply SEMAK.',
 ];
