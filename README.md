@@ -1,5 +1,11 @@
 # Takaful education videos
 
+## Folders
+- `reference/`: inspiration reels and screenshots, one subfolder per video
+- `projects/`: a map of each video's files (text, scenes, images, scripts)
+- `end-project/`: finished MP4s and previews
+- `src/`, `public/`: the code and images Remotion uses (keep these where they are)
+
 Vertical (1080 × 1920) animated infographic videos for Instagram Stories, WhatsApp Status and TikTok, built with [Remotion](https://www.remotion.dev) (React → MP4).
 
 ## Video 1 — "Healing hari ini. Tenang juga esok."
@@ -17,8 +23,8 @@ Vertical (1080 × 1920) animated infographic videos for Instagram Stories, Whats
 | 5 | Langkah seterusnya + CTA | 19 s | s16–s20 |
 
 **Files**
-- `renders/preview/`: low-res previews
-- `renders/v1-editorial/`: the first (navy infographic) version, kept for reference
+- `end-project/preview/`: low-res previews
+- `end-project/v1-editorial/`: the first (navy infographic) version, kept for reference
 - `subtitles/*.srt`, `subtitles/*.vtt`: timed subtitles
 - `docs/voiceover-script.md`: narration script with timings
 - `docs/scene-prompts.md`: image prompts
@@ -45,8 +51,8 @@ Vertical (1080 × 1920) animated infographic videos for Instagram Stories, Whats
 ```bash
 npm install
 npm run studio          # live preview in the browser (scrub, play, inspect)
-npm run render          # full MP4 → renders/healing-hari-ini-full.mp4
-npm run render:chapters # five chapter MP4s → renders/chapters/
+npm run render          # full MP4 → end-project/healing-hari-ini-full.mp4
+npm run render:chapters # five chapter MP4s → end-project/chapters/
 npm run subtitles       # rebuild .srt/.vtt from config
 npm run stills          # key frames → out/stills/
 ```

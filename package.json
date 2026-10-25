@@ -7,14 +7,14 @@
   "scripts": {
     "studio": "remotion studio",
     "preview": "remotion studio",
-    "render": "remotion render HealingFull renders/healing-hari-ini-full.mp4",
+    "render": "remotion render HealingFull end-project/healing-hari-ini-full.mp4",
     "render:chapters": "node scripts/render-chapters.mjs",
     "render:all": "npm run render && npm run render:chapters",
     "stills": "node scripts/render-stills.mjs",
     "subtitles": "node scripts/build-subtitles.mjs",
     "typecheck": "tsc --noEmit",
-    "latte:sample": "remotion render LatteTakafulSample renders/latte/latte-sample-10s.mp4",
-    "latte:render": "remotion render LatteTakaful renders/latte/latte-takaful-full.mp4",
+    "latte:sample": "remotion render LatteTakafulSample end-project/latte/latte-sample-10s.mp4",
+    "latte:render": "remotion render LatteTakaful end-project/latte/latte-takaful-full.mp4",
     "latte:placeholders": "python3 scripts/make-latte-placeholders.py",
     "subtitles:latte": "node scripts/build-latte-subtitles.mjs"
   },
