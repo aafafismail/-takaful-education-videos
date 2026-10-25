@@ -6,3 +6,6 @@ out/
 # HyperFrames snapshots/cache
 projects/*/.hyperframes/artifacts/
 projects/*/.hyperframes/cache/
+# HyperFrames render temp files
+end-project/**/work-*/
+end-project/**/.*.hf-transaction-*/
