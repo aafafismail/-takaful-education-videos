@@ -122,33 +122,33 @@ export type Shot = {
 };
 
 export const shots: Shot[] = [
-  // 1 — the coffee moment: wide café → close on the cup and her face
-  {file: 'scene1-cafe', start: 0, from: [1.04, 50, 50], to: [1.14, 50, 48], tin: 'cross'},
-  {file: 'scene1-cafe', start: 3.4, from: [1.45, 52, 60], to: [1.7, 52, 62], tin: 'cut'},
-  // 2 — the monthly budget at home
-  {file: 'scene2-budget', start: 8.0, from: [1.05, 50, 50], to: [1.16, 50, 55], tin: 'flash', dim: 0.15},
-  {file: 'scene2-budget', start: 13.8, from: [1.4, 50, 70], to: [1.55, 48, 72], tin: 'cut', dim: 0.3},
-  // 3 — the small change: café counter → cups → calendar
-  {file: 'scene3-counter', start: 20.0, from: [1.12, 50, 45], to: [1.04, 50, 50], tin: 'cross'},
+  // 1 — the coffee moment: her with the latte → closer on face + cup
+  {file: 'scene1-cafe', start: 0, from: [1.04, 45, 40], to: [1.1, 45, 40], tin: 'cross'},
+  {file: 'scene1-cafe', start: 3.4, from: [1.3, 45, 52], to: [1.38, 45, 54], tin: 'cut'},
+  // 2 — the monthly budget at home → closer on notebook + phone
+  {file: 'scene2-budget', start: 8.0, from: [1.04, 50, 45], to: [1.1, 50, 45], tin: 'flash'},
+  {file: 'scene2-budget', start: 11.0, from: [1.3, 45, 72], to: [1.4, 45, 74], tin: 'cut', dim: 0.15},
+  // 3 — the small change: café counter → cups counted → calendar (soft background)
+  {file: 'scene3-counter', start: 20.0, from: [1.12, 50, 40], to: [1.04, 50, 40], tin: 'cross'},
   {file: 'scene3-counter', start: 24.4, from: [1.3, 50, 50], to: [1.38, 50, 50], tin: 'cross', dim: 0.55, blur: 10},
-  // 4 — coffee at home
-  {file: 'scene4-kitchen', start: 33.0, from: [1.04, 50, 50], to: [1.12, 50, 50], tin: 'flash'},
-  {file: 'scene4-kitchen', start: 37.2, from: [1.38, 50, 62], to: [1.5, 52, 64], tin: 'cut', dim: 0.2},
-  // 5 — the americano joke: drift between the two cups
-  {file: 'scene5-two-cups', start: 46.0, from: [1.25, 40, 55], to: [1.25, 60, 55], tin: 'cross', dim: 0.1},
+  // 4 — coffee at home: wide pour → closer on her smile
+  {file: 'scene4-kitchen', start: 33.0, from: [1.04, 45, 50], to: [1.12, 45, 50], tin: 'flash'},
+  {file: 'scene4-kitchen', start: 37.6, from: [1.25, 45, 40], to: [1.32, 45, 40], tin: 'cut', dim: 0.1},
+  // 5 — the americano joke
+  {file: 'scene5-two-cups', start: 46.0, from: [1.06, 50, 50], to: [1.12, 50, 48], tin: 'cross'},
   // 6 — making room: budget again → family moment
-  {file: 'scene2-budget', start: 53.0, from: [1.3, 50, 66], to: [1.4, 50, 68], tin: 'cross', dim: 0.35},
-  {file: 'scene6-family', start: 57.2, from: [1.14, 50, 52], to: [1.04, 50, 50], tin: 'cross', dim: 0.15},
+  {file: 'scene2-budget', start: 53.0, from: [1.3, 45, 72], to: [1.36, 45, 72], tin: 'cross', dim: 0.3},
+  {file: 'scene6-family', start: 57.2, from: [1.14, 50, 40], to: [1.04, 50, 40], tin: 'cross', dim: 0.1},
 ];
 
 /** Steam wisps: [start, end, x px, y px] in the 1080×1920 frame. Adjust once real images are in. */
 export const steam: [number, number, number, number][] = [
-  [3.4, 8.0, 560, 1000],
-  [37.2, 46.0, 560, 1040],
+  [3.4, 8.0, 455, 1060],
+  [33.2, 37.6, 507, 1270],
 ];
 
 /** Price-tag positions over scene 5's cups (px). Adjust to the real image. */
-export const americanoTags = {latte: {x: 330, y: 820}, americano: {x: 750, y: 820}};
+export const americanoTags = {latte: {x: 300, y: 1000}, americano: {x: 750, y: 1090}};
 
 /** Optional single-cup illustration for the counting sequence. */
 export const cupImage = 'latte/cup.png';

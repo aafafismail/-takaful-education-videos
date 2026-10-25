@@ -155,12 +155,12 @@ const Subtitles: React.FC = () => {
   const b = s2f(cue.end);
   const o = interpolate(f, [a, a + 5, b - 5, b], [0, 1, 1, 0], clamp);
   return (
-    <div style={{position: 'absolute', top: 1270, left: SAFE.left, width: W, display: 'flex', justifyContent: 'center', opacity: o, transform: `translateY(${(1 - Math.min(1, (f - a) / 6)) * 10}px)`}}>
+    <div style={{position: 'absolute', top: 1395, left: SAFE.left, width: W, display: 'flex', justifyContent: 'center', opacity: o, transform: `translateY(${(1 - Math.min(1, (f - a) / 6)) * 10}px)`}}>
       <div
         style={{
           fontFamily: F.body,
           fontWeight: 800,
-          fontSize: 46,
+          fontSize: 40,
           lineHeight: 1.28,
           textAlign: 'center',
           color: '#FFFFFF',
@@ -192,21 +192,22 @@ const Subtitles: React.FC = () => {
 
 /* ---------------- scene overlays ---------------- */
 const Hook: React.FC<{f: number}> = ({f}) => (
-  <div style={{position: 'absolute', top: 330, left: SAFE.left, width: W, textAlign: 'center', ...popStyle(f, B.hookIn, 3.9)}}>
-    <div style={{fontFamily: F.title, fontSize: 92, lineHeight: 1.06, textTransform: 'uppercase', color: '#FFFFFF', textShadow: '0 4px 0 rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.55)'}}>
+  <div style={{position: 'absolute', top: 1240, left: SAFE.left, width: W, textAlign: 'center', ...popStyle(f, B.hookIn, 3.9)}}>
+    <div style={{fontFamily: F.title, fontSize: 80, lineHeight: 1.06, textTransform: 'uppercase', color: '#FFFFFF', textShadow: '0 4px 0 rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.55)'}}>
       Kena stop <span style={{color: C.yellow}}>latte</span> ke kalau nak mula <span style={{color: C.yellow}}>takaful?</span>
     </div>
   </div>
 );
 
 const Budget: React.FC<{f: number}> = ({f}) => (
-  <div style={{position: 'absolute', top: 340, left: SAFE.left, width: W, ...popStyle(f, B.perMonth - 0.2, B.s3 - 0.4)}}>
-    <Card style={{padding: '28px 34px', textAlign: 'center'}}>
-      <div style={{fontSize: 28, fontWeight: 600, opacity: 0.85}}>{T.contributionLabel}</div>
-      <div style={{fontFamily: F.title, fontSize: 110, lineHeight: 1.05}}>{T.perMonth}</div>
-      <div style={{fontFamily: F.title, fontSize: 76, lineHeight: 1.1, opacity: vis(f, B.divide), color: C.cream}}>{T.divide}</div>
-      <div style={{fontFamily: F.title, fontSize: 100, lineHeight: 1.05, color: C.yellow, ...popStyle(f, B.perDay)}}>{T.perDay}</div>
-      <div style={{marginTop: 14, fontSize: 21, lineHeight: 1.4, opacity: 0.85 * vis(f, B.qualification)}}>{T.qualification}</div>
+  <div style={{position: 'absolute', top: 1000, left: SAFE.left, width: W, ...popStyle(f, B.perMonth - 0.2, B.s3 - 0.4)}}>
+    <Card style={{padding: '20px 30px 22px', textAlign: 'center'}}>
+      <div style={{fontSize: 24, fontWeight: 600, opacity: 0.85}}>{T.contributionLabel}</div>
+      <div style={{fontFamily: F.title, fontSize: 88, lineHeight: 1.05}}>
+        {T.perMonth} <span style={{fontSize: 64, opacity: vis(f, B.divide)}}>{T.divide}</span>
+      </div>
+      <div style={{fontFamily: F.title, fontSize: 80, lineHeight: 1.05, color: C.yellow, ...popStyle(f, B.perDay)}}>{T.perDay}</div>
+      <div style={{marginTop: 8, fontSize: 19, lineHeight: 1.35, opacity: 0.85 * vis(f, B.qualification)}}>{T.qualification}</div>
     </Card>
   </div>
 );
@@ -223,7 +224,7 @@ const SmallChange: React.FC<{f: number}> = ({f}) => {
   return (
     <>
       {/* price tag at the counter */}
-      <div style={{position: 'absolute', top: 360, left: SAFE.left, width: W, textAlign: 'center', ...popStyle(f, B.lattePrice, B.cups - 0.3)}}>
+      <div style={{position: 'absolute', top: 430, left: SAFE.left, width: W, textAlign: 'right', ...popStyle(f, B.lattePrice, B.cups - 0.3)}}>
         <Tag tone="yellow" style={{fontSize: 44, padding: '16px 34px'}}>
           {T.lattePrice}
         </Tag>
@@ -293,12 +294,12 @@ const SmallChange: React.FC<{f: number}> = ({f}) => {
 };
 
 const HomeCoffee: React.FC<{f: number}> = ({f}) => (
-  <div style={{position: 'absolute', top: 340, left: SAFE.left, width: W, ...popStyle(f, B.homeCost, B.s5 - 0.4)}}>
-    <Card style={{padding: '24px 30px 28px', textAlign: 'center'}}>
-      <Tag style={{fontSize: 24, padding: '6px 18px'}}>{T.illustrative}</Tag>
-      <div style={{marginTop: 10, fontFamily: F.title, fontSize: 84, lineHeight: 1.08}}>{T.homeCost}</div>
-      <div style={{fontSize: 34, fontWeight: 700, marginTop: 6, ...popStyle(f, B.perSwitch)}}>{T.perSwitch}</div>
-      <div style={{fontFamily: F.title, fontSize: 88, lineHeight: 1.1, color: C.yellow, marginTop: 8, ...popStyle(f, B.switchTotal)}}>{T.switchTotal}</div>
+  <div style={{position: 'absolute', top: 1010, left: SAFE.left, width: W, ...popStyle(f, B.homeCost, B.s5 - 0.4)}}>
+    <Card style={{padding: '18px 28px 22px', textAlign: 'center'}}>
+      <Tag style={{fontSize: 22, padding: '4px 16px'}}>{T.illustrative}</Tag>
+      <div style={{marginTop: 6, fontFamily: F.title, fontSize: 70, lineHeight: 1.08}}>{T.homeCost}</div>
+      <div style={{fontSize: 30, fontWeight: 700, marginTop: 4, ...popStyle(f, B.perSwitch)}}>{T.perSwitch}</div>
+      <div style={{fontFamily: F.title, fontSize: 72, lineHeight: 1.1, color: C.yellow, marginTop: 4, ...popStyle(f, B.switchTotal)}}>{T.switchTotal}</div>
     </Card>
   </div>
 );
@@ -313,7 +314,7 @@ const Americano: React.FC<{f: number}> = ({f}) => {
     <>
       {tag(americanoTags.latte, T.latteTag, 0)}
       {tag(americanoTags.americano, T.americanoTag, 0.4)}
-      <div style={{position: 'absolute', top: 400, left: SAFE.left, width: W, textAlign: 'center', ...popStyle(f, B.gap, B.s6 - 0.4)}}>
+      <div style={{position: 'absolute', top: 1220, left: SAFE.left, width: W, textAlign: 'center', ...popStyle(f, B.gap, B.s6 - 0.4)}}>
         <Tag tone="yellow" style={{fontSize: 52, padding: '14px 36px'}}>
           {T.gapTag}
         </Tag>
@@ -323,7 +324,7 @@ const Americano: React.FC<{f: number}> = ({f}) => {
 };
 
 const MakingRoom: React.FC<{f: number}> = ({f}) => (
-  <div style={{position: 'absolute', top: 340, left: SAFE.left, width: W, ...popStyle(f, B.s6 + 0.3, B.family - 0.3)}}>
+  <div style={{position: 'absolute', top: 850, left: SAFE.left, width: W, ...popStyle(f, B.s6 + 0.3, B.family - 0.3)}}>
     <Card strong style={{padding: '26px 34px'}}>
       <div style={{fontSize: 30, fontWeight: 800, marginBottom: 8}}>{T.budgetTitle}</div>
       {T.budgetLines.map((l) => (
@@ -356,11 +357,11 @@ const MakingRoom: React.FC<{f: number}> = ({f}) => (
 
 const EndCard: React.FC<{f: number}> = ({f}) => (
   <>
-    <div style={{position: 'absolute', top: 340, left: SAFE.left, width: W, textAlign: 'center', fontFamily: F.title, textTransform: 'uppercase', textShadow: '0 4px 0 rgba(0,0,0,0.45), 0 10px 30px rgba(0,0,0,0.55)'}}>
-      <div style={{fontSize: 96, lineHeight: 1.05, color: '#FFFFFF', ...popStyle(f, B.end1)}}>{T.end1}</div>
-      <div style={{fontSize: 80, lineHeight: 1.08, color: C.yellow, marginTop: 10, ...popStyle(f, B.end2)}}>{T.end2}</div>
+    <div style={{position: 'absolute', top: 1000, left: SAFE.left, width: W, textAlign: 'center', fontFamily: F.title, textTransform: 'uppercase', textShadow: '0 4px 0 rgba(0,0,0,0.45), 0 10px 30px rgba(0,0,0,0.55)'}}>
+      <div style={{fontSize: 84, lineHeight: 1.05, color: '#FFFFFF', ...popStyle(f, B.end1)}}>{T.end1}</div>
+      <div style={{fontSize: 66, lineHeight: 1.08, color: C.yellow, marginTop: 10, ...popStyle(f, B.end2)}}>{T.end2}</div>
     </div>
-    <div style={{position: 'absolute', top: 1250, left: SAFE.left, width: W, textAlign: 'center', ...popStyle(f, B.cta)}}>
+    <div style={{position: 'absolute', top: 1300, left: SAFE.left, width: W, textAlign: 'center', ...popStyle(f, B.cta)}}>
       <Tag tone="yellow" style={{fontSize: 46, padding: '16px 40px'}}>
         {T.cta}
       </Tag>
