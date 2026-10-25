@@ -561,5 +561,16 @@
         "attribution": "unversioned"
       }
     ]
-  }
+  },
+  "renders": {
+    "latest": {
+      "id": "ad4bebe1-689a-4cb9-8246-b1a865ed849d",
+      "completedAt": 1792938204750,
+      "output": "/home/user/-takaful-education-videos/end-project/latte/latte-takaful-hyperframes.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
 }
