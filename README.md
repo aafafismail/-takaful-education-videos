@@ -98,3 +98,12 @@ A 68-second illustrated story: one consistent character, six painterly scenes, a
 - **Render:** `npm run latte:sample` (10 s sample), `npm run latte:render` (full).
 - **Motion:** camera pushes, pans and crops on stills; code-drawn steam, light and dust. There is no character animation. For real sipping or pouring, supply short video clips and they can be cut in.
 - **Emoji:** the 😂 is a Twemoji graphic (CC-BY 4.0, © Twitter/X and contributors), because colour-emoji fonts don't render in headless Chrome.
+
+## Video 3 — "Same face. Different moments." (UGC cinematic, 15 s)
+
+Built from the 15-panel storyboard in `reference/ugc-storyboard/storyboard.png`, one cut per second: zoom-ins, pans, zoom-out, light leak, doodle heart, scarf detail, tilt, back view, foreground blur, shadow play, end frame. Warm/teal film grade, grain, whip-pan, flash and dissolve transitions, script-font title, and an original 120 bpm music bed (kick on every cut).
+
+- Output: `end-project/ugc-storyboard/same-face-different-moments.mp4` (1080 × 1920, 30 fps)
+- Panels: `public/storyboard-ugc/p01.png` … `p15.png` (cut from the storyboard). Replace any panel with a sharper photo of the same framing and re-render for a crisper result.
+- Render: `python3 scripts/make-ugc-storyboard.py` (needs numpy, Pillow, ffmpeg; ~8 min)
+- Font: Great Vibes (SIL Open Font License), `public/fonts/`
