@@ -107,3 +107,17 @@ Built from the 15-panel storyboard in `reference/ugc-storyboard/storyboard.png`,
 - Panels: `public/storyboard-ugc/p01.png` … `p15.png` (cut from the storyboard). Replace any panel with a sharper photo of the same framing and re-render for a crisper result.
 - Render: `python3 scripts/make-ugc-storyboard.py` (needs numpy, Pillow, ffmpeg; ~8 min)
 - Font: Great Vibes (SIL Open Font License), `public/fonts/`
+
+## B-roll overlays: couples discussing money
+
+Five 5-second still-image animations (slow Ken Burns moves, no AI motion, no audio or text) for a TikTok talking-head video. Output: `end-project/couple-money/overlay_01.mp4` … `overlay_05.mp4` (1080 × 1920, 30 fps, H.264, yuv420p).
+
+| File | Beat | Move |
+|---|---|---|
+| overlay_01 | Financial tension | slow push-in, both in frame |
+| overlay_02 | Feeling blamed | very subtle zoom to her face |
+| overlay_03 | Changing approach | gentle left-to-right pan |
+| overlay_04 | Listing commitments | slow top-down push to the cards |
+| overlay_05 | Working together | gentle push-in toward the couple |
+
+Tune zoom, focus point or pan in `src/couple-money/config.ts`, then `npm run couple:render`.

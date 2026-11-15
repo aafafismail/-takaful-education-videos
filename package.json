@@ -16,7 +16,8 @@
     "latte:sample": "remotion render LatteTakafulSample end-project/latte/latte-sample-10s.mp4",
     "latte:render": "remotion render LatteTakaful end-project/latte/latte-takaful-full.mp4",
     "latte:placeholders": "python3 scripts/make-latte-placeholders.py",
-    "subtitles:latte": "node scripts/build-latte-subtitles.mjs"
+    "subtitles:latte": "node scripts/build-latte-subtitles.mjs",
+    "couple:render": "node scripts/render-couple-overlays.mjs"
   },
   "dependencies": {
     "@fontsource/anton": "^5.2.5",

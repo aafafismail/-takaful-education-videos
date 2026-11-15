@@ -10,6 +10,8 @@ import {Ch4Practical} from './chapters/Ch4Practical';
 import {Ch5NextStep} from './chapters/Ch5NextStep';
 import {LatteVideo} from './latte/LatteVideo';
 import {latteVideo} from './latte/config';
+import {CoupleOverlay} from './couple-money/CoupleOverlay';
+import {overlays, overlayVideo} from './couple-money/config';
 
 const SCENES = [Ch1Hook, Ch2Postpone, Ch3Foundation, Ch4Practical, Ch5NextStep];
 
@@ -74,6 +76,19 @@ export const RemotionRoot: React.FC = () => (
     ))}
     {/* Latte & takaful video */}
     <Composition id={latteVideo.id} component={LatteVideo} durationInFrames={latteVideo.durationSec * latteVideo.fps} fps={latteVideo.fps} width={latteVideo.width} height={latteVideo.height} />
+    {/* Couple & money: five still-image B-roll overlays */}
+    {overlays.map((o) => (
+      <Composition
+        key={o.id}
+        id={o.id}
+        component={CoupleOverlay}
+        defaultProps={{overlay: o}}
+        durationInFrames={overlayVideo.durationSec * overlayVideo.fps}
+        fps={overlayVideo.fps}
+        width={overlayVideo.width}
+        height={overlayVideo.height}
+      />
+    ))}
     <Composition id={`${latteVideo.id}Sample`} component={LatteVideo} durationInFrames={latteVideo.sampleSec * latteVideo.fps} fps={latteVideo.fps} width={latteVideo.width} height={latteVideo.height} />
   </>
 );

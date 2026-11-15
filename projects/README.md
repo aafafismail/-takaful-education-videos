@@ -6,3 +6,4 @@ Each video's working files. The actual code must stay in `src/` and the images i
 |---|---|---|---|---|
 | Healing hari ini. Tenang juga esok. | `src/config.ts` | `src/chapters/` | `public/scenes/` | `docs/voiceover-script.md`, `docs/scene-prompts.md` |
 | Kena stop latte ke kalau nak mula takaful? | `src/latte/config.ts` | `src/latte/LatteVideo.tsx` | `public/latte/` | `docs/latte/` |
+| Couple & money B-roll overlays (5 × 5 s) | `src/couple-money/config.ts` | `src/couple-money/CoupleOverlay.tsx` | `public/couple-money/` | `scripts/render-couple-overlays.mjs` |
