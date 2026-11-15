@@ -1,0 +1,24 @@
+{
+  "slug": "my-new-reel",
+  "topic": "What this reel is about (for your records)",
+  "seriesLabel": "Money Talk",
+  "hook": "One strong opening line. Wrap a few words in *stars* to highlight them.",
+  "mainMessage": "The one main point, in one or two short sentences.",
+  "tip": "The practical action.",
+  "tipFigure": null,
+  "tipItems": ["Optional checklist item", "Up to four items"],
+  "reinforce": "Optional: why the tip helps. Delete this line for a 4-scene reel.",
+  "closing": "Closing line that invites people to try the tip.",
+  "kickers": {},
+  "narration": {},
+  "hashtags": ["#MoneyTalk"],
+  "cover": {},
+  "signoff": "Afaf Ismail",
+  "media": {
+    "portrait": null,
+    "voiceover": null,
+    "music": "none"
+  },
+  "captions": {"allowEstimated": false},
+  "allowTakaful": false
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "couples-money-talk",
+  "builtAt": "2026-11-15T08:05:30.654Z",
+  "brief": "briefs/couples-money-talk.json",
+  "durationSec": 27.53,
+  "scenes": 5,
+  "media": [
+    "Portrait: none supplied. Text-led editorial design used.",
+    "Voiceover: none supplied. Text-led video; a voiceover script is still generated.",
+    "Music: original ambient pad generated locally with ffmpeg."
+  ],
+  "captions": [
+    "No voiceover, so no captions are burned in. subtitles.srt lists the on-screen text with the time each line appears (it is not a speech transcript)."
+  ],
+  "timingNotes": [],
+  "warnings": [],
+  "generatedSceneDataHash": "15bc48e3409ef30a9fdc9ea826ab7c0b8269f0445cf5e01c0315d8500b1fb0b3"
+}

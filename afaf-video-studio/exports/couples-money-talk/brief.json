@@ -1,0 +1,39 @@
+{
+  "slug": "couples-money-talk",
+  "topic": "Couples arguing over household finances",
+  "seriesLabel": "Money Talk",
+  "hook": "Kadang bukan duit yang buat pasangan bergaduh. Tapi *cara kita bercakap* pasal duit.",
+  "mainMessage": "Senaraikan komitmen bersama dulu. *Tanpa salahkan* sesiapa.",
+  "tip": "Satu sesi ringkas untuk bincang komitmen rumah.",
+  "tipFigure": {"value": "15", "unit": "minit"},
+  "tipItems": ["Bil rumah", "Barang dapur", "Komitmen lain"],
+  "reinforce": "Bila semua dah tertulis, anda berdua *nampak gambaran yang sama*.",
+  "closing": "Cuba minggu ini. *No blaming, just understanding.*",
+  "kickers": {
+    "hook": "Untuk pasangan",
+    "message": "Mula di sini",
+    "tip": "Cuba ini",
+    "reinforce": "Kenapa ia membantu",
+    "closing": "Minggu ini"
+  },
+  "narration": {
+    "hook": "Kadang bukan duit yang buat pasangan bergaduh. Tapi cara kita bercakap pasal duit.",
+    "message": "Sebelum bincang siapa belanja apa, senaraikan komitmen bersama dulu. Tanpa salahkan sesiapa.",
+    "tip": "Luangkan lima belas minit. Tulis bil rumah, barang dapur dan komitmen lain.",
+    "reinforce": "Bila semua dah tertulis, anda berdua nampak gambaran yang sama.",
+    "closing": "Cuba minggu ini. No blaming, just understanding."
+  },
+  "caption": "Kadang bukan duit yang buat pasangan bergaduh. Tapi cara kita bercakap pasal duit.\n\nBila perbualan bermula dengan \"kenapa\", pasangan mudah rasa disoal. Cuba mula dengan senarai, bukan dengan soalan.\n\nLuangkan 15 minit bersama:\n• Bil rumah\n• Barang dapur\n• Komitmen lain\n\nTulis dulu. Belum ada siapa salah, belum ada \"patutnya\". Bila semua dah tertulis, anda berdua nampak gambaran yang sama.\n\nCuba minggu ini. No blaming, just understanding.\n\n#MoneyTalk #PasanganMuda #KewanganKeluarga #BudgetBersama",
+  "cover": {
+    "title": "Bukan duit. Tapi *cara kita bercakap* pasal duit.",
+    "kicker": "Money Talk"
+  },
+  "signoff": "Afaf Ismail",
+  "media": {
+    "portrait": null,
+    "voiceover": null,
+    "music": "generated"
+  },
+  "captions": {"allowEstimated": false},
+  "allowTakaful": false
+}

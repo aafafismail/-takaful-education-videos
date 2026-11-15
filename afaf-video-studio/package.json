@@ -1,0 +1,30 @@
+{
+  "name": "afaf-video-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Brief-to-Reel pipeline for Afaf Ismail: JSON brief in, 1080x1920 Instagram Reel out (Remotion).",
+  "scripts": {
+    "postinstall": "node scripts/copy-fonts.mjs",
+    "reel": "node scripts/reel.mjs",
+    "studio": "node scripts/reel.mjs studio",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "5.2.8",
+    "@fontsource/playfair-display": "5.2.8",
+    "@remotion/bundler": "4.0.543",
+    "@remotion/cli": "4.0.543",
+    "@remotion/fonts": "4.0.543",
+    "@remotion/renderer": "4.0.543",
+    "@remotion/transitions": "4.0.543",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.543",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

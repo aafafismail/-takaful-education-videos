@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "slug": "couples-money-talk",
+  "topic": "Couples arguing over household finances",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "transitionFrames": 14,
+  "seriesLabel": "Money Talk",
+  "signoff": "Afaf Ismail",
+  "media": {
+    "portrait": null,
+    "voiceover": null,
+    "music": null
+  },
+  "captions": {
+    "mode": "none",
+    "burnIn": false,
+    "cues": []
+  },
+  "cover": {
+    "title": "Bukan duit. Tapi *cara kita bercakap* pasal duit.",
+    "kicker": "Money Talk"
+  },
+  "scenes": [
+    {
+      "id": "s01-hook",
+      "type": "hook",
+      "kicker": "Untuk pasangan",
+      "lines": [
+        {
+          "text": "Kadang bukan duit yang buat pasangan bergaduh.",
+          "at": 0.1,
+          "size": "lg"
+        },
+        {
+          "text": "Tapi *cara kita bercakap* pasal duit.",
+          "at": 2.78,
+          "size": "lg"
+        }
+      ],
+      "narration": "Kadang bukan duit yang buat pasangan bergaduh. Tapi cara kita bercakap pasal duit.",
+      "durationInFrames": 193,
+      "showPortrait": false
+    },
+    {
+      "id": "s02-message",
+      "type": "message",
+      "kicker": "Mula di sini",
+      "lines": [
+        {
+          "text": "Senaraikan komitmen bersama dulu.",
+          "at": 0.45,
+          "size": "lg"
+        },
+        {
+          "text": "*Tanpa salahkan* sesiapa.",
+          "at": 2.13,
+          "size": "xl"
+        }
+      ],
+      "narration": "Sebelum bincang siapa belanja apa, senaraikan komitmen bersama dulu. Tanpa salahkan sesiapa.",
+      "durationInFrames": 171,
+      "showPortrait": false
+    },
+    {
+      "id": "s03-tip",
+      "type": "tip",
+      "kicker": "Cuba ini",
+      "lines": [
+        {
+          "text": "Satu sesi ringkas untuk bincang komitmen rumah.",
+          "at": 1.05,
+          "size": "md"
+        }
+      ],
+      "items": [
+        {
+          "text": "Bil rumah",
+          "at": 3.73
+        },
+        {
+          "text": "Barang dapur",
+          "at": 4.4
+        },
+        {
+          "text": "Komitmen lain",
+          "at": 5.07
+        }
+      ],
+      "figure": {
+        "value": "15",
+        "unit": "minit"
+      },
+      "narration": "Luangkan lima belas minit. Tulis bil rumah, barang dapur dan komitmen lain.",
+      "durationInFrames": 211,
+      "showPortrait": false
+    },
+    {
+      "id": "s04-reinforce",
+      "type": "reinforce",
+      "kicker": "Kenapa ia membantu",
+      "lines": [
+        {
+          "text": "Bila semua dah tertulis, anda berdua *nampak gambaran yang sama*.",
+          "at": 0.45,
+          "size": "md"
+        }
+      ],
+      "narration": "Bila semua dah tertulis, anda berdua nampak gambaran yang sama.",
+      "durationInFrames": 163,
+      "showPortrait": false
+    },
+    {
+      "id": "s05-closing",
+      "type": "closing",
+      "kicker": "Minggu ini",
+      "lines": [
+        {
+          "text": "Cuba minggu ini.",
+          "at": 0.45,
+          "size": "xl"
+        },
+        {
+          "text": "*No blaming, just understanding.*",
+          "at": 1.8,
+          "size": "lg"
+        }
+      ],
+      "narration": "Cuba minggu ini. No blaming, just understanding.",
+      "durationInFrames": 144,
+      "showPortrait": false
+    }
+  ]
+}

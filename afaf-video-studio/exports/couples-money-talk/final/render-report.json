@@ -1,0 +1,26 @@
+{
+  "renderedAt": "2026-11-15T08:07:58.388Z",
+  "ok": true,
+  "file": "exports/couples-money-talk/final/couples-money-talk.mp4",
+  "bytes": 4919180,
+  "durationSec": 27.541,
+  "frames": 826,
+  "checks": {
+    "video stream present": true,
+    "resolution 1080×1920": true,
+    "30 fps": true,
+    "H.264": true,
+    "yuv420p": true,
+    "duration 20 to 30 s (got 27.54 s)": true,
+    "duration matches scene data (27.53 s)": true,
+    "audio track present (AAC)": true,
+    "cover PNG is 1080×1920": true
+  },
+  "approval": {
+    "approvedAt": "2026-11-15T08:06:56.475Z",
+    "approvedBy": "Claude (demo check)",
+    "contentHash": "8fe12b98a5b16534870251b0167ed6a07ae6830195a0bdb540f8e71ca81a8d2e",
+    "preview": "2026-11-15T08:06:56.378Z"
+  },
+  "published": false
+}
